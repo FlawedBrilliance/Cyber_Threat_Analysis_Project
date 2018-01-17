@@ -1,20 +1,22 @@
-Cyber Threat Analysis Semester Project
+# Cyber Threat Analysis Semester Project
 
-Python library for Cymon.io APIs
-Install
+Python library for <Cymon.io> API Version 2.0
 
-pip install cymon
 
-Examples
+## Install
+
+```pip install cymon```
+
+## Examples
 
 With API authentication:
-
+```python
 from cymon import Cymon
 api = Cymon('A4HD6N0V3J357GM7D189V17Y0S')
 api.ip_domains('185.27.134.165')
-
-Output
-
+```
+## Output
+```
 {u'count': 4,
  u'next': None,
  u'previous': None,
@@ -42,9 +44,10 @@ Output
    u'tag': u'malware',
    u'title': u'Malware reported by AlienVault Reputation System',
    u'updated': u'2015-02-23T14:32:10'}]}
+```
 
-Available methods
-
+## Available methods
+```
     ip_lookup()
     hostname_lookup()
     ip_domains()
@@ -53,4 +56,4 @@ Available methods
     domain_lookup()
     domain_blacklist()
     url_lookup()
-
+```
