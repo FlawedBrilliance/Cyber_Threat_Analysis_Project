@@ -51,9 +51,9 @@ class Cymon(object):
         r = self.get('/url/' + quote_plus(location))
         return json.loads(r.text)
 
-    def ip_blacklist(self, tag):
+    def ip_blacklist(self, tag, fromdate ="2018-01-01" ):
         ''' supported tags: malware, botnet, spam, phishing, dnsbl, blacklist '''
-        r = self.get('/tags/'+tag)
+        r = self.get('/tags/'+tag+'?startDate=2018-01-02&endDate=2018-01-17&from=0&size=10')
         return json.loads(r.text)
 
     def domain_blacklist(self, tag, days=1, limit=10, offset=0):
